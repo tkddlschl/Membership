@@ -29,10 +29,10 @@ class UserTest {
 		//assertNotNull(dataSource);
 	}
 	
-	@Disabled @Test
+	@Test
 	public void test1() {
-		UserVo user = this.userService.selectUser("chulsu");
-		assertEquals("박철수", user.getName());
+		UserVo user = this.userService.selectUser("jimin");
+		assertEquals("한지민", user.getName());
 		System.out.println(user);
 	}
 	
@@ -56,7 +56,7 @@ class UserTest {
 		assertEquals(1, rowcount);
 	}
 	
-	@Test
+	@Disabled @Test
 	public void test5() {
 		List<UserVo> list = this.userService.selectAllUsers();
 		for(UserVo user : list) {
